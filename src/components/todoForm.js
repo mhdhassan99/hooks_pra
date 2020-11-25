@@ -1,17 +1,17 @@
 import React from 'react';
 
 
-let todoForm = () => {
-    console.log('hi')
+let TodoForm = () => {
+    // console.log('hi')
     return (
-        <div>   
+        <div className="row m-3">   
             <input className="col form-control" type="text" />
 
-            <button>
+            <button className="btn btn-primary mx-2" >
                 ADD
             </button>
         </div>
     );
 }
 
-export default todoForm;
+export default TodoForm;
