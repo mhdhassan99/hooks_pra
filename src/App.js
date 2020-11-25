@@ -8,13 +8,13 @@ import TodoForm from './components/TodoForm'
 
 
 function App() {
-  let [todo, setTodo] = useState([{id: 1, title: 'study', description: 'study hooks for 3 hours'}])
+  let [todo, setTodo] = useState([{id: 0, title: 'study', description: 'study hooks for 3 hours'}])
 
   const addTodo = (obj) => {
-    obj.id = todo.id + 1
+    obj.id = (todo.length - 1) + 1
+    
     let copyOfState = [...todo, obj]
     setTodo(copyOfState)
-  
   }
   
   return (

@@ -6,14 +6,14 @@ let TodoList = (props) => {
     let todos = props.todos.map((todo) => <TodoItem key={todo.id} id={todo.id} title={todo.title} description={todo.description}/>)
     return (
         <div className="row-4">
-            <div className='row mx-2 align-items-center'>
-                <div className='col'>
+            <div className='row mx-4 align-items-center'>
+                <div className='col-3'>
                     <h1>ID</h1>
                 </div>
                 <div className='col' >
                     <h2>To Do Name</h2>
                 </div>
-                <div className='col'>
+                <div className='col-6'>
                     <h4>To Do Description</h4>
                 </div>
             </div>
