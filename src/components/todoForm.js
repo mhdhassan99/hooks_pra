@@ -1,13 +1,30 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 
-let TodoForm = () => {
-    // console.log('hi')
+let TodoForm = (props) => {
+
+    let [search, setSearch] = useState({title: '', description: ''})
+
+    const inputHandle = (e) => {
+        const value = e.target.value
+        setSearch({
+            ...search, 
+            [e.target.name]: value
+        })
+    }
+
+    const handleAdd = (e) => {
+         props.addTodo(search)
+        //  console.log(search)
+    }
+
+
     return (
         <div className="row m-3">   
-            <input className="col form-control" type="text" />
+            <input onChange={inputHandle} className="col form-control" type="text" value={search.name} name='title'/>
+            <input onChange={inputHandle} className="col form-control" type="text" value={search.description} name='description'/>
 
-            <button className="btn btn-primary mx-2" >
+            <button onClick={handleAdd} className="btn btn-primary mx-2" >
                 ADD
             </button>
         </div>

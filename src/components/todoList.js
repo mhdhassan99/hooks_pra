@@ -10,7 +10,7 @@ let TodoList = (props) => {
                 <div className='col'>
                     <h1>ID</h1>
                 </div>
-                <div className='col'>
+                <div className='col' >
                     <h2>To Do Name</h2>
                 </div>
                 <div className='col'>

@@ -15,6 +15,9 @@ let TodoItem = (props) => {
                 <h4>{props.description}</h4>
             </div>
             
+            <button className="btn btn-primary mx-2">Edit</button>
+            <button className="btn btn-danger mx-2">Delete</button>
+        
         </div>
     );
 }
