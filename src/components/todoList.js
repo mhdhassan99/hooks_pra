@@ -3,7 +3,7 @@ import TodoItem from './TodoItem'
 
 let TodoList = (props) => {
     
-    let todos = props.todos.map((todo) => <TodoItem key={todo.id} id={todo.id} title={todo.title} description={todo.description}/>)
+    let todos = props.todos.map((todo) => <TodoItem key={todo.id} id={todo.id} title={todo.title} description={todo.description} deleteHandle={props.deleteHandle}/>)
     return (
         <div className="row-4">
             <div className='row mx-4 align-items-center'>
