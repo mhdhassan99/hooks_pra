@@ -27,10 +27,21 @@ function App() {
     setTodo(copyOfState)
   }  
 
+  const editHandle = (obj) => {
+    let copyOfState = [...todo]
+    let newState = copyOfState.map(todo => {
+        if (todo.id === obj.id){
+          return obj;
+        }
+        return todo
+    })
+    setTodo(newState)
+  }
+
   return (
     <div className="App m-5">
         <TodoForm todos={todo} addTodo={addTodo}/>
-        <TodoList todos={todo} deleteHandle={deleteHandle}/>
+        <TodoList todos={todo} deleteHandle={deleteHandle} editHandle={editHandle}/>
     </div>
   );
 }
